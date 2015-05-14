@@ -29,7 +29,7 @@ GEM_NAME = "chef"
 desc "build Gems of Chef's components"
 task :package_components do
   Dir.chdir("chef-config") do
-    sh "rake build"
+    sh "rake package"
   end
 end
 
@@ -156,3 +156,4 @@ begin
 rescue LoadError
   puts "yard is not available. (sudo) gem install yard to generate yard documentation."
 end
+
